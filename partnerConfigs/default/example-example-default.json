@@ -1,0 +1,28 @@
+{
+	"streaming": {
+        "mediaSelector": {
+            "mediaSelectorBaseUrl": {
+                "sandbox": "https://securegate.iplayer.bbc.co.uk",
+                "int": "https://ipsecure.int.bbc.co.uk",
+                "test": "https://ipsecure.test.bbc.co.uk",
+                "stage": "https://ipsecure.stage.bbc.co.uk",
+                "live": "https://securegate.iplayer.bbc.co.uk"
+            },
+            "mediaSelectorURI": "/mediaselector/5/select/version/2.0/vpid/%vpid%/format/json/mediaset/%mediaset%/jsfunc/%callback%/proto/http",
+            "mediaSelectorStreamBasedOnType": {
+                "mediated": {
+                    "standard": "legacy-iptv-all"
+                }
+            },
+            "defaultMediaSet": "standard",
+            "mediaSetFilters": {
+                "legacy-iptv-all": {
+                    "minimumBitRate": 200,
+                    "maximumBitRate": 4500
+                }
+            }            
+        }
+	},
+
+        "dualscreen" : true
+}

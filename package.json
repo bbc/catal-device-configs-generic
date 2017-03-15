@@ -1,0 +1,28 @@
+{
+    "name": "catal-device-configs",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bbc/catal-device-configs"
+    },
+    "scripts": {
+        "jsonlint": "node ./node_modules/grunt-cli/bin/grunt jsonlint",
+        "install": "./build/build-partner-configs.sh",
+        "build": "./build/build-configs.sh && npm test",
+        "test": "npm run jsonlint"
+    },
+    "files": [
+      "build", "partnerConfigs", "Gruntfile.js"
+    ],
+    "description": "Application config for CATAL",
+    "main": "index.js",
+    "directories": {
+        "configs": "configs"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-cli": "~1.2.0",
+        "grunt-contrib-copy": "~0.5.0",
+        "grunt-jsonlint": "^1.0.6"
+    }
+}
